@@ -16,7 +16,7 @@ export class AppComponent {
 
   getUserInput(player: string[]) {
     this.getPlayerData(player[0], player[1]);
-    this.showScrollBar = this.players.length >= 3 ? 'scroll' : 'hidden';
+    this.showScrollBar = this.players.length >= 2 ? 'scroll' : 'hidden';
   }
 
   getPlayerData(playerHandle: string, platform: string) {
@@ -67,5 +67,6 @@ export class AppComponent {
     });
 
     this.players.splice(playerIndex, 1);
+    this.showScrollBar = this.players.length >= 3 ? 'scroll' : 'hidden';
   }
 }
