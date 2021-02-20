@@ -1,1 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./apex-red-theme.scss";
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #181818;
+  background-image: url(./assets/3518234.jpg);
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  overflow-y: scroll;
+  background: #181818;
+  box-shadow: inset 0 0 4px #181818;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b71c1c;
+  border-radius: 10px;
+}

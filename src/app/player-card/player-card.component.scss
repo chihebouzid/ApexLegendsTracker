@@ -1,0 +1,90 @@
+.players-cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: inherit;
+}
+
+.player-card {
+  align-items: center;
+  width: 630px;
+  background-position: center;
+  background-size: cover;
+  margin: 0 0 20px 0;
+}
+
+.player-info-container {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  background-color: rgb(0 0 0 / 21%);
+  padding: 10px;
+}
+
+.player-info {
+  width: 65%;
+}
+
+.player-handle {
+  font-weight: bolder;
+  font-size: 35px;
+  text-align: start;
+  margin: 15px 0 30px 0 !important;
+}
+
+.stats-main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.stat-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.vl {
+  border-left: 2px solid white;
+  height: 60px;
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  height: 75px;
+  margin-left: 10px;
+}
+
+.stat-title {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.stat-score {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.player-rank {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+}
+
+.rank-name {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.delete-btn {
+  position: absolute;
+  left: 580px;
+  top: 143px;
+}

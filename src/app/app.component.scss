@@ -1,0 +1,28 @@
+.main-container {
+  background-color: #fffffff0;
+  height: 100%;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.app-player-card {
+  height: 60%;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+#header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  img {
+    padding-top: 15px;
+    width: 80px;
+  }
+}

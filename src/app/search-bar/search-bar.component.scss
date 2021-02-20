@@ -1,0 +1,14 @@
+.full-width {
+  width: 100%;
+}
+
+.search-container {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px;
+  padding: 10px;
+  border-radius: 10px;
+}
