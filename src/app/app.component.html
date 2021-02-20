@@ -2,7 +2,7 @@
   <div id="header">
     <img src="../assets/207539-250x250.png" alt="Apex Logo" />
   </div>
-  <app-search-bar (playerAdded)="addPlayer($event)"></app-search-bar>
+  <app-search-bar (userInput)="getUserInput($event)"></app-search-bar>
   <app-player-card
     [players]="players"
     class="app-player-card"
