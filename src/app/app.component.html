@@ -3,9 +3,13 @@
     <img src="../assets/207539-250x250.png" alt="Apex Logo" />
   </div>
   <app-search-bar (userInput)="getUserInput($event)"></app-search-bar>
-  <app-player-card
-    [players]="players"
-    class="app-player-card"
-    [ngStyle]="{ 'overflow-y': showScrollBar }"
-  ></app-player-card>
+  <div class="players-cards-container">
+    <app-player-card
+      *ngFor="let player of players"
+      [player]="player"
+      (deletePlayer)="deletePlayer($event)"
+      class="app-player-card"
+      [ngStyle]="{ 'overflow-y': showScrollBar }"
+    ></app-player-card>
+  </div>
 </div>

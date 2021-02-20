@@ -1,6 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { PlayerData } from '../player-card/player-card.component';
-import { TrackerAPIService } from '../services/trackerggAPI.service';
 
 interface Platform {
   value: string;

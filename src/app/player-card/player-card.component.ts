@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 
 export interface PlayerData {
   name: string;
@@ -18,18 +18,14 @@ export interface PlayerData {
   styleUrls: ['./player-card.component.scss'],
 })
 export class PlayerCardComponent implements OnInit {
-  @Input() players: PlayerData[] = [];
+  @Input() player: any;
+  @Output() deletePlayer = new EventEmitter<string>();
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  deletePlayer(playerName: string) {
-    console.log('onDelete', playerName);
-    let playerIndex = this.players.findIndex((player) => {
-      return player.name === playerName;
-    });
-
-    this.players.splice(playerIndex, 1);
+  removePlayer(playerName: string) {
+    this.deletePlayer.emit(playerName);
   }
 }

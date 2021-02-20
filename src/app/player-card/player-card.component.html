@@ -1,50 +1,47 @@
-<div class="players-cards-container">
-  <mat-card
-    *ngFor="let player of players"
-    class="player-card"
-    [ngStyle]="{
-      'background-image': 'url(' + player.avtiveLegendBGImg + ')'
-    }"
-  >
-    <div class="player-info-container">
-      <div class="player-info">
-        <div class="player-handle">{{ player.name }}</div>
-        <div class="stats-main-container">
-          <div class="stat-container">
-            <div class="vl"></div>
-            <div class="stat-content">
-              <div class="stat-title">Level</div>
-              <div class="stat-score">{{ player.level }}</div>
-            </div>
+<mat-card
+  class="player-card"
+  [ngStyle]="{
+    'background-image': 'url(' + player.avtiveLegendBGImg + ')'
+  }"
+>
+  <div class="player-info-container">
+    <div class="player-info">
+      <div class="player-handle">{{ player.name }}</div>
+      <div class="stats-main-container">
+        <div class="stat-container">
+          <div class="vl"></div>
+          <div class="stat-content">
+            <div class="stat-title">Level</div>
+            <div class="stat-score">{{ player.level }}</div>
           </div>
-          <div class="stat-container">
-            <div class="vl"></div>
-            <div class="stat-content">
-              <div class="stat-title">Kills</div>
-              <div class="stat-score">{{ player.kills }}</div>
-            </div>
+        </div>
+        <div class="stat-container">
+          <div class="vl"></div>
+          <div class="stat-content">
+            <div class="stat-title">Kills</div>
+            <div class="stat-score">{{ player.kills }}</div>
           </div>
-          <div class="stat-container">
-            <div class="vl"></div>
-            <div class="stat-content">
-              <div class="stat-title">Damage</div>
-              <div class="stat-score">{{ player.damage }}</div>
-            </div>
+        </div>
+        <div class="stat-container">
+          <div class="vl"></div>
+          <div class="stat-content">
+            <div class="stat-title">Damage</div>
+            <div class="stat-score">{{ player.damage }}</div>
           </div>
         </div>
       </div>
-      <div class="player-rank">
-        <img [src]="player.rank.iconUrl" alt="rank-icon" />
-        <div class="rank-name">{{ player.rank.rankName }}</div>
-      </div>
     </div>
-    <button
-      mat-mini-fab
-      color="primary"
-      class="delete-btn"
-      (click)="deletePlayer(player.name)"
-    >
-      <mat-icon>delete</mat-icon>
-    </button>
-  </mat-card>
-</div>
+    <div class="player-rank">
+      <img [src]="player.rank.iconUrl" alt="rank-icon" />
+      <div class="rank-name">{{ player.rank.rankName }}</div>
+    </div>
+  </div>
+  <button
+    mat-mini-fab
+    color="primary"
+    class="delete-btn"
+    (click)="removePlayer(player.name)"
+  >
+    <mat-icon>delete</mat-icon>
+  </button>
+</mat-card>

@@ -16,6 +16,7 @@ export class AppComponent {
 
   getUserInput(player: string[]) {
     this.getPlayerData(player[0], player[1]);
+    this.showScrollBar = this.players.length >= 3 ? 'scroll' : 'hidden';
   }
 
   getPlayerData(playerHandle: string, platform: string) {
@@ -60,9 +61,11 @@ export class AppComponent {
     return activeLegend[0].metadata.bgImageUrl;
   }
 
-  // addPlayer(players: PlayerData[]) {
-  //   this.players = players;
-  //   this.showScrollBar = this.players.length >= 3 ? 'scroll' : 'hidden';
-  //   console.log('app component players', players);
-  // }
+  deletePlayer(playerName: string) {
+    let playerIndex = this.players.findIndex((player) => {
+      return player.name === playerName;
+    });
+
+    this.players.splice(playerIndex, 1);
+  }
 }

@@ -10,6 +10,13 @@
   margin-right: auto;
 }
 
+.players-cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: inherit;
+}
+
 .app-player-card {
   height: 60%;
   padding: 20px;
