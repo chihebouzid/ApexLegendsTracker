@@ -2,17 +2,28 @@
   <div id="header">
     <img src="../assets/207539-250x250.png" alt="Apex Logo" />
   </div>
-  <app-search-bar (userInput)="getUserInput($event)"></app-search-bar>
-  <app-chart></app-chart>
+  <button (click)="goBackToSearch()">Back to search</button>
+  <app-search-bar
+    (userInput)="getUserInput($event)"
+    [ngStyle]="{ visibility: hideSearch }"
+    [showSpinner]="showSpinner"
+  ></app-search-bar>
   <div
     class="players-cards-container"
     [ngStyle]="{ 'overflow-y': showScrollBar }"
+    [ngClass]="hideSearch === 'hidden' ? 'hide-search' : ''"
   >
     <app-player-card
       *ngFor="let player of players"
       [player]="player"
       (deletePlayer)="deletePlayer($event)"
+      (showPlayerStats)="onShowPlayerInsights($event)"
       class="app-player-card"
     ></app-player-card>
   </div>
+  <app-chart
+    [playerWins]="players[currentPlayer].wins"
+    *ngIf="hideSearch === 'hidden' ? true : false"
+    [ngClass]="hideSearch === 'hidden' ? 'hide-search' : ''"
+  ></app-chart>
 </div>

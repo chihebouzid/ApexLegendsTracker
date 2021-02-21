@@ -37,7 +37,7 @@
     </div>
   </div>
   <div class="action-btns">
-    <button mat-mini-fab color="primary">
+    <button mat-mini-fab color="primary" (click)="showInsights(player.name)">
       <mat-icon>insights</mat-icon>
     </button>
     <button mat-mini-fab color="primary" (click)="removePlayer(player.name)">

@@ -10,6 +10,7 @@ export interface PlayerData {
     rankName: string;
   };
   avtiveLegendBGImg: string;
+  wins: number[];
 }
 
 @Component({
@@ -20,6 +21,7 @@ export interface PlayerData {
 export class PlayerCardComponent implements OnInit {
   @Input() player: any;
   @Output() deletePlayer = new EventEmitter<string>();
+  @Output() showPlayerStats = new EventEmitter<string[]>();
 
   constructor() {}
 
@@ -27,5 +29,9 @@ export class PlayerCardComponent implements OnInit {
 
   removePlayer(playerName: string) {
     this.deletePlayer.emit(playerName);
+  }
+
+  showInsights(PlayerName: string) {
+    this.showPlayerStats.emit([PlayerName, 'hidden']);
   }
 }

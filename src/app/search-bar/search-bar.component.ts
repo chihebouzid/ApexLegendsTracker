@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { PlayerData } from '../player-card/player-card.component';
 
 interface Platform {
@@ -22,11 +22,13 @@ export class SearchBarComponent implements OnInit {
   players: PlayerData[] = [];
   constructor() {}
   @Output() userInput = new EventEmitter<string[]>();
+  @Input() showSpinner: boolean = false;
 
   ngOnInit(): void {}
 
   getUserInput(playerHandle: string, platform: string) {
     let playerData = [playerHandle, platform];
     this.userInput.emit(playerData);
+    this.showSpinner = true;
   }
 }

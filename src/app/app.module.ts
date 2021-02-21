@@ -14,13 +14,19 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { TrackerAPIService } from './services/trackerggAPI.service';
 import { StateService } from './services/state.service';
 import { ChartComponent } from './chart/chart.component';
 
 @NgModule({
-  declarations: [AppComponent, SearchBarComponent, PlayerCardComponent, ChartComponent],
+  declarations: [
+    AppComponent,
+    SearchBarComponent,
+    PlayerCardComponent,
+    ChartComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -32,6 +38,7 @@ import { ChartComponent } from './chart/chart.component';
     MatButtonModule,
     MatCardModule,
     MatIconModule,
+    MatProgressSpinnerModule,
   ],
   providers: [TrackerAPIService, StateService],
   bootstrap: [AppComponent],
