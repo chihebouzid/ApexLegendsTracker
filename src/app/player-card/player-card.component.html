@@ -36,12 +36,12 @@
       <div class="rank-name">{{ player.rank.rankName }}</div>
     </div>
   </div>
-  <button
-    mat-mini-fab
-    color="primary"
-    class="delete-btn"
-    (click)="removePlayer(player.name)"
-  >
-    <mat-icon>delete</mat-icon>
-  </button>
+  <div class="action-btns">
+    <button mat-mini-fab color="primary">
+      <mat-icon>insights</mat-icon>
+    </button>
+    <button mat-mini-fab color="primary" (click)="removePlayer(player.name)">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
 </mat-card>

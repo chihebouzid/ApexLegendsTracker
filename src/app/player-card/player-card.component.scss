@@ -76,8 +76,12 @@
   font-weight: 400;
 }
 
-.delete-btn {
+.action-btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   position: absolute;
   left: 580px;
-  top: 143px;
+  top: 80px;
+  height: 100px;
 }

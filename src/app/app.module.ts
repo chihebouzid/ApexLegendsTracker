@@ -17,9 +17,10 @@ import { MatIconModule } from '@angular/material/icon';
 
 import { TrackerAPIService } from './services/trackerggAPI.service';
 import { StateService } from './services/state.service';
+import { ChartComponent } from './chart/chart.component';
 
 @NgModule({
-  declarations: [AppComponent, SearchBarComponent, PlayerCardComponent],
+  declarations: [AppComponent, SearchBarComponent, PlayerCardComponent, ChartComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

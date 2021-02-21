@@ -34,10 +34,10 @@ dd {
 
 html,
 body {
-  height: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 body {
-  min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
@@ -45,9 +45,9 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background-color: #181818;
   background-image: url(./assets/3518234.jpg);
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  overflow: hidden;
 }
 
 ::-webkit-scrollbar {
